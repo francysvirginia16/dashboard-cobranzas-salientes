@@ -192,7 +192,7 @@
 </footer>
 
 <script>
-const GITHUB_CSV = 'https://raw.githubusercontent.com/francysvirginia16/dashboard-cobranzas-entrantes/main/llamadas%20Salientes.csv';
+const GITHUB_CSV = 'https://raw.githubusercontent.com/francysvirginia16/dashboard-cobranzas-salientes/main/llamadas_Salientes.csv';
 
 const POSITIVOS = ['call_promesa','call_pago_tarjeta','call_pago_a_confirmar','call_pago_tarjeta_pendiente',
   'call_solicita_pago_con_quita','call_solicita_pago_contado','call_solicita_financiacion',
@@ -408,7 +408,7 @@ function render(d) {
 async function cargar() {
   try {
     // Fetch CSV data and last commit date in parallel
-    const GITHUB_API = 'https://api.github.com/repos/francysvirginia16/dashboard-cobranzas-entrantes/commits?path=llamadas%20Salientes.csv&per_page=1';
+    const GITHUB_API = 'https://api.github.com/repos/francysvirginia16/dashboard-cobranzas-salientes/commits?path=llamadas_Salientes.csv&per_page=1';
     const [csvRes, commitRes] = await Promise.all([
       fetch(GITHUB_CSV),
       fetch(GITHUB_API)
